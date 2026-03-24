@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar Patrimonio | Inicio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Existing Shared CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Home specific structure -->
+    <style>
+        .home-hero {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 80vh;
+        }
+
+        .home-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .home-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            border-radius: 4px;
+            text-align: left;
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="pilar-monogram">
+                    <div class="pilar-bar pilar-bar-1"></div>
+                    <div class="pilar-bar pilar-bar-2"></div>
+                    <div class="pilar-bar pilar-bar-3"></div>
+                </div>
+                <span class="logo-text">PILAR PATRIMONIO</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="ia.html" class="nav-link">IA</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero section-dark bg-architecture"
+        style="background-image: none; background-color: var(--color-navy);">
+        <div class="hero-bg-overlay"></div>
+        <div class="container fade-in-up">
+            <div class="home-hero-content">
+                <p class="hero-supporting">SOCIOS EN TRANSFORMACIÓN DIGITAL</p>
+                <h1 class="hero-title" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 2rem;">SOLUCIONES
+                    DIGITALES QUE IMPULSAN TU NEGOCIO</h1>
+                <p class="hero-subheadline"
+                    style="max-width: 600px; margin: 0 auto 3rem auto; text-align: center; color: var(--color-muted);">
+                    Creamos experiencias web y herramientas basadas en inteligencia artificial.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="ia.html" class="btn btn-primary">Ver soluciones de IA <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section-charcoal border-top">
+        <div class="container fade-in-up">
+            <h2 class="section-title text-center">Nuestros Servicios</h2>
+            <div class="home-services-grid">
+
+                <div class="service-card fade-in-up delay-1">
+                    <div class="service-icon">✦</div>
+                    <h3 class="step-title">Desarrollo Web</h3>
+                    <p class="step-desc">Construimos plataformas digitales de clase mundial, ultrarrápidas y orientadas
+                        a la conversión con arquitecturas modernas y sólidas.</p>
+                </div>
+
+                <div class="service-card fade-in-up delay-2">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="step-title">Automatización con IA</h3>
+                    <p class="step-desc">Integramos modelos de lenguaje y flujos de trabajo inteligentes para reducir
+                        costos operativos y escalar capacidades de negocio.</p>
+                </div>
+
+                <div class="service-card fade-in-up delay-3">
+                    <div class="service-icon">◇</div>
+                    <h3 class="step-title">Diseño de UX / UI</h3>
+                    <p class="step-desc">Diseñamos interfaces premium, intuitivas y elegantes, focalizándonos en la
+                        retención del cliente y la excelencia visual corporativa.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DESTACADA / VALOR IA -->
+    <section class="section-dark bg-circuit border-top" style="padding-bottom: 8rem; min-height: auto;">
+        <div class="container split-section fade-in-up">
+            <div class="split-left">
+                <h2 class="section-title">El valor estratégico de la Inteligencia Artificial.</h2>
+                <div class="text-block">
+                    <p>En el panorama actual, la integración temprana de herramientas algorítmicas no es una ventaja
+                        adicional, es el nuevo estándar. Ayudamos a las empresas a decodificar datos, automatizar su
+                        base operativa y multiplicar su eficiencia.</p>
+                </div>
+                <div class="hero-buttons mt-large">
+                    <a href="ia.html" class="btn btn-secondary">Explorar fondo de IA</a>
+                </div>
+            </div>
+            <div class="split-right" style="display: flex; align-items: center; justify-content: center;">
+                <div class="elegant-text-block">
+                    <p class="glow-text"
+                        style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-light); line-height: 1.4; text-align: center;">
+                        "La ventaja competitiva definitiva en la economía moderna es la velocidad de adaptación."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contacto" class="closing-cta section-charcoal border-top text-center" style="padding: 8rem 0;">
+        <div class="container fade-in-up">
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 1.5rem;">Descubrí cómo aplicar IA en tu
+                proyecto</h2>
+            <p class="closing-text">Agende una consulta privada para analizar su estructura actual.</p>
+            <div class="cta-wrapper mt-large">
+                <a href="ia.html" class="btn btn-primary" style="margin: 0 auto;">Ver soluciones de IA <span
+                        class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer section-dark border-top">
+        <div class="container footer-content fade-in-up">
+            <div class="footer-logo">
+                © 2026 Pilar Patrimonio
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="ia.html">IA</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERSECTION OBSERVER SCRIPT -->
+    <script src="main.js"></script>
+</body>
+
+</html>
