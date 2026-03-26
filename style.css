@@ -185,7 +185,8 @@ section {
 }
 
 .pilar-bar-1 {
-    height: 100%;
+    height: 50%;
+    opacity: 0.4;
 }
 
 .pilar-bar-2 {
@@ -194,8 +195,7 @@ section {
 }
 
 .pilar-bar-3 {
-    height: 50%;
-    opacity: 0.4;
+    height: 100%;
 }
 
 .logo-text {
@@ -221,6 +221,74 @@ section {
 
 .nav-link:hover {
     color: var(--color-light);
+}
+
+/* --- Mobile Hamburger Menu --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-light);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(8, 12, 17, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    /* Hamburger to X Animation */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
 }
 
 /* Buttons */
@@ -1314,5 +1382,127 @@ section {
         margin: 0;
         transform: translateX(-50%) scale(0.75);
         transform-origin: center center;
+    }
+}
+
+/* --- Elegant Contact Form --- */
+.form-container {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    background: rgba(8, 12, 17, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 4px;
+}
+
+.elegant-form .form-group {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.elegant-form label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.elegant-form input,
+.elegant-form textarea,
+.elegant-form select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-light);
+    padding: 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    border-radius: 2px;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.elegant-form input:focus,
+.elegant-form textarea:focus,
+.elegant-form select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.elegant-form .country-select {
+    width: 30%;
+    min-width: 100px;
+    max-width: 130px;
+    flex-shrink: 0;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23a0aab5" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    padding-left: 0.8rem;
+    padding-right: 2rem;
+}
+
+.elegant-form .phone-input-field {
+    flex-grow: 1;
+    width: 70%;
+}
+
+.country-select option {
+    background-color: var(--color-navy);
+    color: var(--color-light);
+    font-size: 1rem;
+}
+
+.form-submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.spinner {
+    display: inline-block;
+    animation: spin 1s infinite linear;
+    font-size: 1.2rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form-success-card {
+    text-align: center;
+    padding: 2rem 0;
+    display: none;
+}
+
+.success-icon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .elegant-form input,
+    .elegant-form textarea,
+    .elegant-form select {
+        padding: 1rem;
+        font-size: 16px;
     }
 }

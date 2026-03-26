@@ -1,6 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* 1. INTERSECTION OBSERVER FOR FADE-IN */
+    /* 0. MOBILE HAMBURGER MENU */
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        // Close menu on link click
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    }
+
+    /* 1. CONTACT FORM AJAX POST */
+    /*
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Restored after FormSubmit activation
+        });
+    }
+    */
+
+    /* 2. INTERSECTION OBSERVER FOR FADE-IN */
     const observerOptions = {
         root: null,
         rootMargin: '0px',
