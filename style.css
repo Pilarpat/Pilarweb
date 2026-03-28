@@ -1431,6 +1431,19 @@ body.no-scroll {
     background: rgba(255, 255, 255, 0.05);
 }
 
+.logo-invest-cover {
+    position: absolute;
+    top: 14.5%;
+    left: 45%;
+    width: 28%;
+    height: 3%;
+    background-color: #101c2b;
+    /* Match app header BG */
+    border-radius: 2px;
+    filter: blur(1px);
+    z-index: 5;
+}
+
 .phone-input-group {
     display: flex;
     gap: 0.5rem;
