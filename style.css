@@ -1519,3 +1519,61 @@ body.no-scroll {
         font-size: 16px;
     }
 }
+
+/* OpenAI Holographic Spin & Glow */
+.openai-spin-glow {
+    -webkit-animation: openaiSpin 25s linear infinite, openaiGlowOnly 4s alternate ease-in-out infinite;
+    animation: openaiSpin 25s linear infinite, openaiGlowOnly 4s alternate ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+
+@-webkit-keyframes openaiSpin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes openaiSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes openaiGlowOnly {
+    0% {
+        -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(0, 195, 255, 0.2));
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(0, 195, 255, 0.2));
+    }
+
+    50% {
+        -webkit-filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 50px rgba(0, 195, 255, 0.5));
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 50px rgba(0, 195, 255, 0.5));
+    }
+
+    100% {
+        -webkit-filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 35px rgba(0, 255, 200, 0.3));
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 35px rgba(0, 255, 200, 0.3));
+    }
+}
+
+@keyframes openaiGlowOnly {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(0, 195, 255, 0.2));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 50px rgba(0, 195, 255, 0.5));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 35px rgba(0, 255, 200, 0.3));
+    }
+}
