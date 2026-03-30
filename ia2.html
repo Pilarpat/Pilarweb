@@ -58,15 +58,10 @@
                     <a href="#closing" class="btn-primary">Solicitar asesoramiento confidencial</a>
                 </div>
             </div>
-            <div class="col-visual fade-in-up delay-1">
-                <!-- Abstract visual representation: precision mechanism/metal -->
-                <div class="abstract-mechanism">
-                    <div class="mech-ring ring-1"></div>
-                    <div class="mech-ring ring-2"></div>
-                    <div class="mech-core chip">
-                        <div class="chip-inner"></div>
-                    </div>
-                </div>
+            <div class="col-visual fade-in-up delay-1"
+                style="display: flex; align-items: center; justify-content: center;">
+                <img src="openai-logo.svg" alt="Pilar Patrimonio IA" class="openai-spin-glow"
+                    style="width: 100%; height: auto; max-width: 320px;">
             </div>
         </div>
     </section>
@@ -316,7 +311,8 @@
             <div class="col-text fade-in-up">
                 <h2 class="section-title">Acceso eficiente a<br>gigantes tecnológicos.</h2>
                 <div class="text-block">
-                    <p>Las operaciones se realizan a través de la plataforma Azul, donde se administra y gestiona su
+                    <p>Las operaciones se realizan a través de la plataforma VektorCap, donde se administra y gestiona
+                        su
                         capital distribuido de forma estratégica en las empresas líderes del sector.</p>
                     <p>Sencilla e intuitiva le permite acceder a toda la información que necesita, permitiéndole
                         distribuir en las diferentes compañías del fondo.</p>
@@ -470,7 +466,7 @@
                             <select id="country-code" name="codigo_pais" required class="country-select">
                                 <option value="+54">🇦🇷 +54</option>
                                 <option value="+598">🇺🇾 +598</option>
-                                <option value="+56" selected>🇨🇱 +56</option>
+                                <option value="+56">🇨🇱 +56</option>
                                 <option value="+55">🇧🇷 +55</option>
                                 <option value="+34">🇪🇸 +34</option>
                                 <option value="+1">🇺🇸 +1</option>
@@ -479,6 +475,7 @@
                                 <option value="+595">🇵🇾 +595</option>
                                 <option value="+591">🇧🇴 +591</option>
                                 <option value="+52">🇲🇽 +52</option>
+                                <option value="+593" selected>🇪🇨 +593</option>
                             </select>
                             <input type="tel" id="phone" name="telefono" required placeholder="9 1234 5678"
                                 class="phone-input-field">
@@ -491,8 +488,9 @@
                             placeholder="Quisiera recibir más información sobre el fondo y sus procesos de apertura..."></textarea>
                     </div>
 
-                    <!-- Honeypot & Core Config for FormSubmit -->
+                    <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_cc" value="octaviogswedencap@gmail.com">
                     <input type="hidden" name="_subject" value="Nuevo Prospecto de Pilar Patrimonio">
                     <input type="text" name="_honey" style="display:none">
 

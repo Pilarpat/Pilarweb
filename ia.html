@@ -58,15 +58,10 @@
                     <a href="#closing" class="btn-primary">Solicitar asesoramiento confidencial</a>
                 </div>
             </div>
-            <div class="col-visual fade-in-up delay-1">
-                <!-- Abstract visual representation: precision mechanism/metal -->
-                <div class="abstract-mechanism">
-                    <div class="mech-ring ring-1"></div>
-                    <div class="mech-ring ring-2"></div>
-                    <div class="mech-core chip">
-                        <div class="chip-inner"></div>
-                    </div>
-                </div>
+            <div class="col-visual fade-in-up delay-1"
+                style="display: flex; align-items: center; justify-content: center;">
+                <img src="openai-logo.svg" alt="Pilar Patrimonio IA" class="openai-spin-glow"
+                    style="width: 100%; height: auto; max-width: 320px;">
             </div>
         </div>
     </section>
@@ -492,8 +487,9 @@
                             placeholder="Quisiera recibir más información sobre el fondo y sus procesos de apertura..."></textarea>
                     </div>
 
-                    <!-- Honeypot & Core Config for FormSubmit -->
+                    <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_cc" value="octaviogswedencap@gmail.com">
                     <input type="hidden" name="_subject" value="Nuevo Prospecto de Pilar Patrimonio">
                     <input type="text" name="_honey" style="display:none">
 
