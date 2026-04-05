@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar Patrimonio | SpaceX IPO</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <meta name="description"
+        content="El IPO más grande de la historia: La apertura de SpaceX. Acceso institucional a través de Pilar Patrimonio.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.1">
+
+    <style>
+        /* SPACEX SPECIFIC OVERRIDES */
+        .hero-spacex {
+            background: radial-gradient(circle at center, #0a0e1c 0%, #000000 70%);
+            position: relative;
+        }
+
+        .hero-spacex::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .spacex-logo-anim {
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+            animation: floatSpaceX 6s ease-in-out infinite;
+        }
+
+        @keyframes floatSpaceX {
+            0% {
+                transform: translateY(0);
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+            }
+
+            50% {
+                transform: translateY(-15px);
+                filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.7));
+            }
+
+            100% {
+                transform: translateY(0);
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+            }
+        }
+
+        .thesis-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media(max-width: 900px) {
+            .thesis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .thesis-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .thesis-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .thesis-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="pilar-monogram">
+                    <div class="pilar-bar pilar-bar-1"></div>
+                    <div class="pilar-bar pilar-bar-2"></div>
+                    <div class="pilar-bar pilar-bar-3"></div>
+                </div>
+                <span class="logo-text">PILAR PATRIMONIO</span>
+            </a>
+            <div class="menu-toggle">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#contexto" class="nav-link">Contexto</a></li>
+                <li class="nav-item"><a href="#fundamentos" class="nav-link">Fundamentos</a></li>
+                <li class="nav-item"><a href="#ventaja" class="nav-link">Ventaja</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="hero section-dark hero-spacex">
+        <div class="container two-column-grid hero-grid" style="position:relative; z-index:2;">
+            <div class="hero-text fade-in-up">
+                <p class="hero-supporting">El Impacto Inicial</p>
+                <h1 class="hero-title" style="font-size:3.2rem; line-height: 1.2;">EL IPO MÁS GRANDE DE LA
+                    HISTORIA:<br>LA APERTURA DE SPACEX.</h1>
+                <p class="hero-subheadline">Posiciónese estratégicamente ante el inminente debut público del gigante
+                    aeroespacial de Elon Musk. Acceso institucional y ejecución de precisión a través de Pilar
+                    Patrimonio.</p>
+                <div class="hero-actions">
+                    <a href="#closing" class="btn-primary">Solicitar Asignación Confidencial</a>
+                </div>
+            </div>
+            <div class="col-visual fade-in-up delay-1"
+                style="display: flex; align-items: center; justify-content: center;">
+                <img src="spacex-logo.svg" alt="SpaceX Logo" class="spacex-logo-anim"
+                    style="width: 100%; height: auto; max-width: 400px; filter: invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.4));">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CONTEXTO FINANCIERO -->
+    <section id="contexto" class="context section-charcoal text-center border-top">
+        <div class="container container-medium fade-in-up">
+            <h2 class="section-title">Un Evento de Liquidez<br>Sin Precedentes.</h2>
+            <div class="context-text-block">
+                <p>En abril de 2026, SpaceX presentó de manera confidencial su solicitud para una Oferta Pública Inicial
+                    (IPO), proyectada para salir al mercado entre junio y julio.</p>
+                <p>Con una valuación objetivo estimada en <span class="text-highlight">1,75 billones de dólares (USD
+                        1.75 Trillion)</span> y una meta de recaudación histórica de hasta <strong>$75.000
+                        millones</strong>, este evento está diseñado para eclipsar el récord mundial establecido por
+                    Saudi Aramco.</p>
+                <p class="text-emphasis">No nos encontramos simplemente ante la salida a bolsa de una empresa de
+                    cohetes; estamos presenciando la consolidación comercial del espacio como la próxima gran frontera
+                    económica y tecnológica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TESIS DE INVERSION / FUNDAMENTOS -->
+    <section id="fundamentos" class="strategy section-black-gradient border-top">
+        <div class="container fade-in-up">
+            <h2 class="section-title text-center">Más que Exploración:<br>Un Conglomerado Tecnológico Dominante.</h2>
+            <div class="text-block text-center" style="max-width:800px; margin: 0 auto; color: var(--color-gray);">
+                <p>El capital inteligente no invierte en promesas; invierte en infraestructura y monopolios de facto.
+                    Con beneficios reportados de aproximadamente $8.000 millones sobre ingresos de $15.500 millones en
+                    el último ejercicio, SpaceX ha demostrado una rentabilidad sólida fundamentada en tres pilares:</p>
+            </div>
+
+            <div class="thesis-grid">
+                <!-- Pillar 1 -->
+                <div class="thesis-card stagger-fade">
+                    <div class="thesis-icon">🚀</div>
+                    <h3 class="principle-title" style="margin-bottom:0.5rem; border-bottom: none; padding-bottom: 0;">
+                        Dominio Logístico</h3>
+                    <p
+                        style="font-size:0.85em; color:var(--color-muted); margin-bottom:1rem; font-family:'Inter', sans-serif;">
+                        (Starship y Falcon)</p>
+                    <p class="principle-text" style="color:var(--color-gray)">El monopolio virtual en lanzamientos
+                        comerciales e institucionales, siendo el socio estratégico indispensable para la NASA, el
+                        Pentágono y la naciente economía lunar.</p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="thesis-card stagger-fade delay-1">
+                    <div class="thesis-icon">🛰️</div>
+                    <h3 class="principle-title" style="margin-bottom:0.5rem; border-bottom: none; padding-bottom: 0;">
+                        Red Global</h3>
+                    <p
+                        style="font-size:0.85em; color:var(--color-muted); margin-bottom:1rem; font-family:'Inter', sans-serif;">
+                        (Starlink)</p>
+                    <p class="principle-text" style="color:var(--color-gray)">La constelación de internet satelital de
+                        mayor crecimiento en el mundo, que hoy representa la principal arteria de flujo de caja de la
+                        compañía.</p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="thesis-card stagger-fade delay-2">
+                    <div class="thesis-icon">🧠</div>
+                    <h3 class="principle-title" style="margin-bottom:0.5rem; border-bottom: none; padding-bottom: 0;">
+                        Nexo con IA</h3>
+                    <p
+                        style="font-size:0.85em; color:var(--color-muted); margin-bottom:1rem; font-family:'Inter', sans-serif;">
+                        (xAI)</p>
+                    <p class="principle-text" style="color:var(--color-gray)">Tras su reciente fusión con la firma xAI,
+                        SpaceX no solo domina el espacio, sino que planea desplegar centros de datos orbitales
+                        impulsados por energía solar. Una convergencia histórica entre procesamiento (IA) y conectividad
+                        sin latencia a nivel global.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: VENTAJA COMPETITIVA -->
+    <section id="ventaja" class="approach section-charcoal border-top">
+        <div class="container two-column-grid">
+            <div class="col-text fade-in-up">
+                <h2 class="section-title">Ejecución Institucional.<br>Acceso Privilegiado.</h2>
+                <div class="text-block">
+                    <p>Un evento de esta magnitud genera un <i>hype</i> desmesurado en el mercado minorista. Mientras el
+                        inversor tradicional espera el toque de campana, expuesto a la volatilidad extrema y la
+                        especulación de los primeros días de cotización, el patrimonio sofisticado requiere
+                        anticipación.</p>
+                    <p>A través de la <span class="text-highlight">Plataforma Azul</span>, Pilar Patrimonio estructura
+                        el canal adecuado y regulado en Estados Unidos para que usted participe de este hito.</p>
+                    <p class="text-emphasis">Le ofrecemos la arquitectura financiera necesaria para posicionar su
+                        capital con la discreción, la seguridad institucional y la visión a largo plazo que su
+                        portafolio exige.</p>
+                </div>
+            </div>
+            <div class="col-visual fade-in-up delay-1">
+                <!-- Phone Mockup showing Azul -->
+                <div class="phone-mockup-container">
+                    <div class="phone-image-wrapper">
+                        <div class="phone-parallax-target">
+                            <img src="phone-mockup.png" alt="Pilar Patrimonio App Interface" class="phone-image">
+                            <div class="logo-invest-cover"></div>
+                            <div class="phone-reflection"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FORMULARIO -->
+    <section id="closing" class="closing section-navy text-center border-top" style="padding: 6rem 0;">
+        <div class="container fade-in-up">
+            <h2 class="section-title">Asegure su Participación.</h2>
+            <p class="closing-text">El cupo para la estructuración previa y el acceso en las primeras etapas de
+                cotización es estrictamente limitado debido a la naturaleza de la demanda institucional.<br><br>Complete
+                el siguiente formulario. Un asesor privado evaluará su perfil y se comunicará de manera confidencial
+                para diseñar su estrategia de entrada.</p>
+
+            <div class="form-container">
+                <form id="contact-form" class="elegant-form" action="https://formsubmit.co/f5mediasocial@gmail.com"
+                    method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre y Apellido</label>
+                        <input type="text" id="name" name="nombre" required placeholder="Ej: Juan Pérez">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <div class="phone-input-group">
+                            <select id="country-code" name="codigo_pais" required class="country-select">
+                                <option value="+54">🇦🇷 +54</option>
+                                <option value="+598">🇺🇾 +598</option>
+                                <option value="+56" selected>🇨🇱 +56</option>
+                                <option value="+55">🇧🇷 +55</option>
+                                <option value="+34">🇪🇸 +34</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+57">🇨🇴 +57</option>
+                                <option value="+51">🇵🇪 +51</option>
+                                <option value="+595">🇵🇾 +595</option>
+                                <option value="+591">🇧🇴 +591</option>
+                                <option value="+52">🇲🇽 +52</option>
+                            </select>
+                            <input type="tel" id="phone" name="telefono" required placeholder="9 1234 5678"
+                                class="phone-input-field">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="mensaje" rows="4" required
+                            placeholder="Quisiera recibir una asignación para el IPO de SpaceX..."></textarea>
+                    </div>
+
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_cc" value="octaviogswedencap@gmail.com">
+                    <input type="hidden" name="_subject" value="Nuevo Prospecto de Pilar Patrimonio - SpaceX">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <button type="submit" class="btn-primary form-submit-btn">
+                        <span class="btn-text">Enviar Solicitud de Evaluación</span>
+                        <span class="spinner" style="display: none;">⟳</span>
+                    </button>
+
+                    <div class="form-error" style="display: none; color: #e82127; margin-top: 1rem; font-size: 0.9rem;">
+                        Hubo un error al enviar el formulario. Inténtelo nuevamente o contáctenos directamente.</div>
+                </form>
+
+                <div id="form-success" class="form-success-card">
+                    <div class="success-icon">✦</div>
+                    <h3 style="margin-bottom: 1rem;">Solicitud enviada con éxito</h3>
+                    <p style="color: var(--color-muted); line-height: 1.6;">Gracias por contactarse con nosotros. Un
+                        asesor privado revisará su solicitud institucional y nos comunicaremos con usted a la brevedad
+                        para estructurar su acceso confidencial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="global-footer section-dark">
+        <div class="container fade-in-up">
+            <div class="footer-contact-grid">
+                <!-- Chile -->
+                <a href="tel:+56233849641" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="contact-country">🇨🇱 Chile</div>
+                    <div class="contact-number">+56 2 3384 9641</div>
+                </a>
+                <!-- Uruguay -->
+                <a href="tel:+59893591326" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="contact-country">🇺🇾 Uruguay</div>
+                    <div class="contact-number">+598 93 591 326</div>
+                </a>
+                <!-- Ecuador -->
+                <a href="tel:+59327085340" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="contact-country">🇪🇨 Ecuador</div>
+                    <div class="contact-number">+593 2 708 5340</div>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">Pilar Patrimonio</div>
+                <div class="footer-links" style="display:flex;">
+                    <span style="color:var(--color-gray);">Acceso Institucional</span>
+                    <span style="color:var(--color-gray); margin:0 1rem;">•</span>
+                    <span style="color:var(--color-gray);">Dominio Aeroespacial</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+
+</html>
