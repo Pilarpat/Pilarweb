@@ -39,6 +39,21 @@
             animation: floatSpaceX 6s ease-in-out infinite;
         }
 
+        .mobile-only-logo {
+            display: none !important;
+        }
+
+        @media (max-width: 900px) {
+            .mobile-only-logo {
+                display: flex !important;
+                margin: 3.5rem 0 !important;
+            }
+
+            .desktop-only-logo {
+                display: none !important;
+            }
+        }
+
         @keyframes floatSpaceX {
             0% {
                 transform: translateY(0);
@@ -123,14 +138,20 @@
                 <p class="hero-supporting">El Impacto Inicial</p>
                 <h1 class="hero-title" style="font-size:3.2rem; line-height: 1.2;">EL IPO MÁS GRANDE DE LA
                     HISTORIA:<br>LA APERTURA DE SPACEX.</h1>
-                <p class="hero-subheadline">Posiciónese estratégicamente ante el inminente debut público del gigante
-                    aeroespacial de Elon Musk. Acceso institucional y ejecución de precisión a través de Pilar
-                    Patrimonio.</p>
+                <p class="hero-subheadline">Invierte desde el primer momento en que la acción sale a bolsa con el acceso
+                    exclusivo que te brinda Pilar Patrimonio.</p>
+
+                <!-- Mobile Only Logo (Above Button) -->
+                <div class="mobile-only-logo fade-in-up delay-1" style="align-items: center; justify-content: center;">
+                    <img src="spacex-logo.svg" alt="SpaceX Logo" class="spacex-logo-anim"
+                        style="width: 100%; height: auto; max-width: 320px; filter: invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.4));">
+                </div>
+
                 <div class="hero-actions">
-                    <a href="#closing" class="btn-primary">Solicitar Asignación Confidencial</a>
+                    <a href="#closing" class="btn-primary">Solicitar asesoramiento confidencial</a>
                 </div>
             </div>
-            <div class="col-visual fade-in-up delay-1"
+            <div class="col-visual desktop-only-logo fade-in-up delay-1"
                 style="display: flex; align-items: center; justify-content: center;">
                 <img src="spacex-logo.svg" alt="SpaceX Logo" class="spacex-logo-anim"
                     style="width: 100%; height: auto; max-width: 400px; filter: invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.4));">
@@ -152,6 +173,33 @@
                 <p class="text-emphasis">No nos encontramos simplemente ante la salida a bolsa de una empresa de
                     cohetes; estamos presenciando la consolidación comercial del espacio como la próxima gran frontera
                     económica y tecnológica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2.5: RENTABILIDAD EN UN SOLO DÍA -->
+    <section id="profitability" class="performance section-black-gradient border-top">
+        <div class="container split-section fade-in-up">
+            <div class="split-left">
+                <h2 class="section-title">Rentabilidad en un solo día.</h2>
+                <div class="text-block">
+                    <p>Históricamente los IPOs (Oferta Pública Inicial), especialmente los del sector tecnológico en
+                        NASDAQ, suelen experimentar un alza promedio que ronda entre el 15% y el 20% durante su primer
+                        día de cotización respecto a su precio de oferta.</p>
+                    <p>Este salto está fuertemente impulsado por el hype, la atención mediática y la demanda del
+                        inversor minorista.</p>
+                    <p>En la última década las salidas a bolsa más importantes fueron las de Airbnb, Uber, Rivian y ARN,
+                        aunque entre todas juntas no llegan a la valuación esperada para SpaceX que podría convertirse
+                        en la mayor salida a bolsa de la historia.</p>
+                </div>
+            </div>
+            <div class="split-right">
+                <div class="large-typography-wrap">
+                    <span class="large-number" data-target="16.4" data-comma="true">16,4<span
+                            class="percent">%</span></span>
+                    <span class="large-label">Retorno histórico en el día de salida a bolsa, teniendo en cuenta las
+                        empresas que salieron a cotizar en Nasdaq durante los últimos 10 años.</span>
+                </div>
             </div>
         </div>
     </section>
@@ -243,11 +291,10 @@
     <!-- SECTION 5: FORMULARIO -->
     <section id="closing" class="closing section-navy text-center border-top" style="padding: 6rem 0;">
         <div class="container fade-in-up">
-            <h2 class="section-title">Asegure su Participación.</h2>
-            <p class="closing-text">El cupo para la estructuración previa y el acceso en las primeras etapas de
-                cotización es estrictamente limitado debido a la naturaleza de la demanda institucional.<br><br>Complete
-                el siguiente formulario. Un asesor privado evaluará su perfil y se comunicará de manera confidencial
-                para diseñar su estrategia de entrada.</p>
+            <h2 class="section-title">Obtenga más información.</h2>
+            <p class="closing-text">Complete el siguiente formulario. Un asesor privado evaluará su perfil y se
+                comunicará de manera confidencial para brindarle toda la información sobre el acceso a esta oportunidad
+                de inversión.</p>
 
             <div class="form-container">
                 <form id="contact-form" class="elegant-form" action="https://formsubmit.co/f5mediasocial@gmail.com"
@@ -268,7 +315,7 @@
                             <select id="country-code" name="codigo_pais" required class="country-select">
                                 <option value="+54">🇦🇷 +54</option>
                                 <option value="+598">🇺🇾 +598</option>
-                                <option value="+56" selected>🇨🇱 +56</option>
+                                <option value="+56">🇨🇱 +56</option>
                                 <option value="+55">🇧🇷 +55</option>
                                 <option value="+34">🇪🇸 +34</option>
                                 <option value="+1">🇺🇸 +1</option>
@@ -277,6 +324,7 @@
                                 <option value="+595">🇵🇾 +595</option>
                                 <option value="+591">🇧🇴 +591</option>
                                 <option value="+52">🇲🇽 +52</option>
+                                <option value="+593" selected>🇪🇨 +593</option>
                             </select>
                             <input type="tel" id="phone" name="telefono" required placeholder="9 1234 5678"
                                 class="phone-input-field">
@@ -296,7 +344,7 @@
                     <input type="text" name="_honey" style="display:none">
 
                     <button type="submit" class="btn-primary form-submit-btn">
-                        <span class="btn-text">Enviar Solicitud de Evaluación</span>
+                        <span class="btn-text">Enviar solicitud</span>
                         <span class="spinner" style="display: none;">⟳</span>
                     </button>
 

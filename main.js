@@ -99,31 +99,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 const target = entry.target;
                 if (!target.classList.contains('counted')) {
                     target.classList.add('counted');
-                    animateNumber(target, 72.5, 2000, 1);
+                    target.classList.add('counted');
+                    const targetVal = parseFloat(target.dataset.target || 72.5);
+                    const useComma = target.dataset.comma === "true";
+                    animateNumber(target, targetVal, 2000, 1, useComma);
                 }
             }
         });
     }, { threshold: 0.5 });
 
-    // Instead of parsing from DOM, hardcode since the text says 22.5%
-    // but here is a simple animator
-    function animateNumber(element, finalValue, duration, decimals) {
+    function animateNumber(element, finalValue, duration, decimals, useComma = false) {
         let startTime = null;
         const step = (currentTime) => {
             if (!startTime) startTime = currentTime;
             const progress = Math.min((currentTime - startTime) / duration, 1);
 
-            // Ease out quad
             const easeProgress = progress * (2 - progress);
             const currentVal = easeProgress * finalValue;
 
-            // Replace text node content specifically so we don't destroy <span class="percent">
-            element.childNodes[0].nodeValue = currentVal.toFixed(decimals);
+            let formatted = currentVal.toFixed(decimals);
+            if (useComma) formatted = formatted.replace('.', ',');
+            element.childNodes[0].nodeValue = formatted;
 
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             } else {
-                element.childNodes[0].nodeValue = finalValue.toFixed(decimals);
+                let finalFormatted = finalValue.toFixed(decimals);
+                if (useComma) finalFormatted = finalFormatted.replace('.', ',');
+                element.childNodes[0].nodeValue = finalFormatted;
             }
         };
         window.requestAnimationFrame(step);
