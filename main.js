@@ -117,16 +117,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const easeProgress = progress * (2 - progress);
             const currentVal = easeProgress * finalValue;
 
-            let formatted = currentVal.toFixed(decimals);
-            if (useComma) formatted = formatted.replace('.', ',');
-            element.childNodes[0].nodeValue = formatted;
+            if (useComma) {
+                // Formatting large integers with Spanish locale (dots for thousands)
+                element.childNodes[0].nodeValue = Math.floor(currentVal).toLocaleString('es-ES');
+            } else {
+                let formatted = currentVal.toFixed(decimals);
+                element.childNodes[0].nodeValue = formatted;
+            }
 
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             } else {
-                let finalFormatted = finalValue.toFixed(decimals);
-                if (useComma) finalFormatted = finalFormatted.replace('.', ',');
-                element.childNodes[0].nodeValue = finalFormatted;
+                if (useComma) {
+                    element.childNodes[0].nodeValue = finalValue.toLocaleString('es-ES');
+                } else {
+                    element.childNodes[0].nodeValue = finalValue.toFixed(decimals);
+                }
             }
         };
         window.requestAnimationFrame(step);
@@ -253,7 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (numElement && !numElement.classList.contains('counted')) {
                     numElement.classList.add('counted');
                     const targetVal = parseFloat(numElement.getAttribute('data-target'));
-                    animateNumber(numElement, targetVal, 1600, 2);
+                    const useComma = numElement.getAttribute('data-comma') === 'true';
+                    animateNumber(numElement, targetVal, 1600, 2, useComma);
                 }
 
                 staggerObserver.unobserve(entry.target);
@@ -293,6 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const prefixEl = clone.querySelector('.perf-prefix');
                 const valContainer = clone.querySelector('.perf-value');
 
+                // The updateCount logic was erroneously inserted here and has been removed.
                 if (target2024[ticker] && numberEl) {
                     numberEl.setAttribute('data-target', target2024[ticker].val);
                     numberEl.innerText = '0.00';

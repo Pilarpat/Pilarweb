@@ -199,6 +199,7 @@ section {
 }
 
 .logo-text {
+    font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     letter-spacing: 0.2em;
     font-weight: 500;
@@ -481,6 +482,7 @@ body.no-scroll {
     margin-bottom: var(--spacing-md);
     color: #fff;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
 }
 
 .context-text-block p {
@@ -1324,6 +1326,11 @@ body.no-scroll {
 /* Responsive adjustments */
 @media (max-width: 992px) {
 
+    .mobile-reverse {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+
     .four-column-grid,
     .two-column-grid,
     .split-section {
@@ -1431,18 +1438,6 @@ body.no-scroll {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.logo-invest-cover {
-    position: absolute;
-    top: 14.5%;
-    left: 45%;
-    width: 28%;
-    height: 3%;
-    background-color: #101c2b;
-    /* Match app header BG */
-    border-radius: 2px;
-    filter: blur(1px);
-    z-index: 5;
-}
 
 .phone-input-group {
     display: flex;
@@ -1729,5 +1724,93 @@ body.no-scroll {
 
     .footer-bottom .footer-links a {
         margin: 0 0.5rem;
+    }
+}
+
+/* Gold Animation for /oro.html */
+.bg-gold {
+    background: linear-gradient(135deg, #1a1500 0%, #3a2a00 50%, #1a1500 100%);
+    background-size: 400% 400%;
+    animation: goldShimmer 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gold::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; right: -50%; bottom: -50%;
+    background: radial-gradient(circle at center, rgba(212,175,55,0.1) 0%, transparent 50%);
+    animation: goldPulse 10s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes goldShimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes goldPulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0.8; }
+}
+
+.gold-text {
+    background: linear-gradient(to right, #d4af37, #f3e5ab, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Navbar Dropdown */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(8, 12, 17, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-item {
+    padding: 0.8rem 1.5rem;
+    color: var(--color-gray);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.dropdown-item:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 900px) {
+    .dropdown-menu {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 1.5rem;
     }
 }
