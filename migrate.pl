@@ -171,6 +171,7 @@ my @pages_to_generate = (
     ['spacex.html', 'spacex.html', '+593', undef, 'VektorCap', 'vektorcap-mockup.png'],
     ['spacex2.html', 'spacex.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'],
     ['oro.html', 'oro.html', '+56', undef, undef, undef],
+    ['plataforma.html', 'plataforma.html', '+56', undef, undef, undef],
     ['apertura.html', 'apertura.html', '+56', undef, undef, undef],
     ['contacto.html', 'contacto.html', '+56', undef, undef, undef],
     ['gracias.html', 'gracias.html', undef, undef, undef],

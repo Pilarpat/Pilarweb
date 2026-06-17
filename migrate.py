@@ -182,6 +182,7 @@ def main():
         ('spacex.html', 'spacex.html', '+593', None, 'VektorCap', 'vektorcap-mockup.png'),
         ('spacex2.html', 'spacex.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'),
         ('oro.html', 'oro.html', '+56', None, None, None),
+        ('plataforma.html', 'plataforma.html', '+56', None, None, None),
         ('apertura.html', 'apertura.html', '+56', None, None, None),
         ('contacto.html', 'contacto.html', '+56', None, None, None),
         ('gracias.html', 'gracias.html', None, None, None),
