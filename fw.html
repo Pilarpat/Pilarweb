@@ -107,10 +107,21 @@
                     padding-bottom: 60px !important;
                 }
                 .hero-grid {
-                    gap: 3rem !important;
+                    display: flex !important;
+                    flex-direction: column !important;
+                    gap: 2.5rem !important;
+                }
+                .hero-grid .col-visual {
+                    order: 1 !important;
+                }
+                .hero-grid .hero-text {
+                    order: 2 !important;
+                }
+                .hero-visual-wrapper {
+                    margin-top: 70px !important;
                 }
                 #hero-visual-container {
-                    min-height: 350px !important;
+                    min-height: 280px !important;
                 }
             }
         </style>
