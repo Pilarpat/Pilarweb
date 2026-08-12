@@ -145,12 +145,12 @@ sub process_html {
     }
     
     if ($p_name) {
-        $content =~ s/plataforma VektorCap/plataforma $p_name/g;
-        $content =~ s/Plataforma VektorCap/plataforma $p_name/g;
+        $content =~ s/plataforma Xyncap/plataforma $p_name/g;
+        $content =~ s/Plataforma Xyncap/plataforma $p_name/g;
     }
     
     if ($m_name) {
-        $content =~ s/vektorcap-mockup\.png/$m_name/g;
+        $content =~ s/xyncap-mockup\.png/$m_name/g;
         if ($m_name eq 'phone-mockup.png' and $content !~ /logo-invest-cover/) {
             $content =~ s/class="phone-image">/class="phone-image"><div class="logo-invest-cover"><\/div>/g;
         }
@@ -163,13 +163,13 @@ sub process_html {
 my @pages_to_generate = (
     # [dst_file, src_file, country_code, country_name, platform_name, mockup_name]
     ['index.html', 'index.html', '+56', undef, undef, undef],
-    ['ia.html', 'fondoia.html', '+56', 'Chile', 'VektorCap', 'vektorcap-mockup.png'],
-    ['ia2.html', 'fondoia.html', '+593', 'Ecuador', 'VektorCap', 'vektorcap-mockup.png'],
-    ['ia3.html', 'fondoia.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'],
-    ['ia4.html', 'fondoia.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'],
+    ['ia.html', 'fondoia.html', '+56', 'Chile', 'Xyncap', 'xyncap-mockup.jpg'],
+    ['ia2.html', 'fondoia.html', '+593', 'Ecuador', 'Xyncap', 'xyncap-mockup.jpg'],
+    ['ia3.html', 'fondoia.html', '+51', 'Perú', 'Xyncap', 'xyncap-mockup.jpg'],
+    ['ia4.html', 'fondoia.html', '+51', 'Perú', 'Xyncap', 'xyncap-mockup.jpg'],
     ['fw.html', 'fondo2026.html', '+51', 'Perú', undef, undef],
-    ['spacex.html', 'spacex.html', '+593', undef, 'VektorCap', 'vektorcap-mockup.png'],
-    ['spacex2.html', 'spacex.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'],
+    ['spacex.html', 'spacex.html', '+593', undef, 'Xyncap', 'xyncap-mockup.jpg'],
+    ['spacex2.html', 'spacex.html', '+51', 'Perú', 'Xyncap', 'xyncap-mockup.jpg'],
     ['oro.html', 'oro.html', '+56', undef, undef, undef],
     ['plataforma.html', 'plataforma.html', '+56', undef, undef, undef],
     ['apertura.html', 'apertura.html', '+56', undef, undef, undef],

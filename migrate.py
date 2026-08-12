@@ -154,13 +154,13 @@ def main():
             content = content.replace('desarrollado desde Ecuador', f'desarrollado desde {country_name}')
             
         if platform_name:
-            # Swap VektorCap references in text for Azul or similar
-            content = content.replace('plataforma VektorCap', f'plataforma {platform_name}')
-            content = content.replace('Plataforma VektorCap', f'plataforma {platform_name}')
+            # Swap Xyncap references in text for Azul or similar
+            content = content.replace('plataforma Xyncap', f'plataforma {platform_name}')
+            content = content.replace('Plataforma Xyncap', f'plataforma {platform_name}')
             
         if mockup_name:
             # Swap mockup images in HTML
-            content = content.replace('vektorcap-mockup.png', mockup_name)
+            content = content.replace('xyncap-mockup.jpg', mockup_name)
             # Add logo-invest-cover overlay to Azul phone mockup if it's there
             if mockup_name == 'phone-mockup.png' and 'logo-invest-cover' not in content:
                 content = content.replace(
@@ -174,13 +174,13 @@ def main():
     pages_to_generate = [
         # (dst_file, src_file, country_code, country_name, platform_name, mockup_name)
         ('index.html', 'index.html', '+56', None, None, None),
-        ('ia.html', 'fondoia.html', '+56', 'Chile', 'VektorCap', 'vektorcap-mockup.png'),
-        ('ia2.html', 'fondoia.html', '+593', 'Ecuador', 'VektorCap', 'vektorcap-mockup.png'),
-        ('ia3.html', 'fondoia.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'),
-        ('ia4.html', 'fondoia.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'),
+        ('ia.html', 'fondoia.html', '+56', 'Chile', 'Xyncap', 'xyncap-mockup.jpg'),
+        ('ia2.html', 'fondoia.html', '+593', 'Ecuador', 'Xyncap', 'xyncap-mockup.jpg'),
+        ('ia3.html', 'fondoia.html', '+51', 'Perú', 'Xyncap', 'xyncap-mockup.jpg'),
+        ('ia4.html', 'fondoia.html', '+51', 'Perú', 'Xyncap', 'xyncap-mockup.jpg'),
         ('fw.html', 'fondo2026.html', '+51', 'Perú', None, None),
-        ('spacex.html', 'spacex.html', '+593', None, 'VektorCap', 'vektorcap-mockup.png'),
-        ('spacex2.html', 'spacex.html', '+51', 'Perú', 'VektorCap', 'vektorcap-mockup.png'),
+        ('spacex.html', 'spacex.html', '+593', None, 'Xyncap', 'xyncap-mockup.jpg'),
+        ('spacex2.html', 'spacex.html', '+51', 'Perú', 'Xyncap', 'xyncap-mockup.jpg'),
         ('oro.html', 'oro.html', '+56', None, None, None),
         ('plataforma.html', 'plataforma.html', '+56', None, None, None),
         ('apertura.html', 'apertura.html', '+56', None, None, None),
