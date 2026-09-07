@@ -540,5 +540,13 @@
 
 
     <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('video').forEach(function(v) {
+                v.muted = true;
+                v.play().catch(function(err) { console.log('Autoplay trigger:', err); });
+            });
+        });
+    </script>
 </body>
 </html>
